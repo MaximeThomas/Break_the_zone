@@ -6,7 +6,7 @@ import {
   AppRegistry,
   Image,
   Dimensions,
-  TouchableHighlight,
+  TouchableWithoutFeedback,
 } from "react-native";
 import { LinearGradient } from 'expo';
 
@@ -23,10 +23,10 @@ export default class App extends React.Component {
             <Image style={styles.img} source={require('./pictures/Break_the_zone_3.png')} />
           </View>
           <View style={styles.banner}>
-            <TouchableHighlight>
+            <TouchableWithoutFeedback>
               <View style={styles.button_start}>
               </View>
-            </TouchableHighlight>
+            </TouchableWithoutFeedback>
           </View>
         </LinearGradient>
       </View>
