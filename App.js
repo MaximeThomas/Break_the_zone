@@ -28,6 +28,9 @@ export default class App extends React.Component {
                 <LinearGradient
                   colors={['#ffff00', '#ffb300']}
                   style={styles.gradient2}>
+                  <Text style={styles.text_start}>
+                    Start
+                  </Text>
                 </LinearGradient>
               </View>
             </TouchableWithoutFeedback>
@@ -54,6 +57,12 @@ const styles = StyleSheet.create({
   button_start: {
     width: 200,
     height: 100,
+  },
+  text_start: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    fontFamily: 'System',
+    color: '#f30000', // Better if I don't find how to add Text stroke
   },
   imageContainer: {
     flex: 1,
