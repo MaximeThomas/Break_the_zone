@@ -1,8 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  AppRegistry,
+  Image,
+  Dimensions,
+  TouchableHighlight,
+} from "react-native";
 import { LinearGradient } from 'expo';
-import { AppRegistry, Image } from 'react-native';
-import { Dimensions, TouchableHighlight } from 'react-native'
 
 export default class App extends React.Component {
   render() {
@@ -10,7 +16,6 @@ export default class App extends React.Component {
       <View style={{ flex: 1, alignSelf: "center", alignItems: 'center', justifyContent: 'center' }}>
         <LinearGradient
           start={{ x: 0.0, y: -0.35 }} end={{ x: 0.75, y: 1.0 }}
-          //   locations={[0,0.5,0.6]}
           colors={['#e60099', '#0099cc']}
           //  colors={['#ff3300', '#ffff00']}
           style={styles.gradient}>
