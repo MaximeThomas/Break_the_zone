@@ -25,6 +25,10 @@ export default class App extends React.Component {
           <View style={styles.banner}>
             <TouchableWithoutFeedback>
               <View style={styles.button_start}>
+                <LinearGradient
+                  colors={['#ffff00', '#ffb300']}
+                  style={styles.gradient2}>
+                </LinearGradient>
               </View>
             </TouchableWithoutFeedback>
           </View>
@@ -41,11 +45,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  gradient2: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 20,
+  },
   button_start: {
     width: 200,
     height: 100,
-    borderRadius:20,
-    backgroundColor: 'red',
   },
   imageContainer: {
     flex: 1,
