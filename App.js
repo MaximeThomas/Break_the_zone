@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import { LinearGradient } from 'expo';
 
+import { strings } from './locales/i18n';
+
 export default class App extends React.Component {
   render() {
     return (
@@ -29,7 +31,7 @@ export default class App extends React.Component {
                   colors={['#ffff00', '#ffb300']}
                   style={styles.gradient2}>
                   <Text style={styles.text_start}>
-                    Start
+                    {strings('start.start')}
                   </Text>
                 </LinearGradient>
               </View>
