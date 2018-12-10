@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     height: 100,
   },
   text_start: {
-    fontSize: 40,
+    fontSize: 32,
     fontWeight: 'bold',
     fontFamily: 'System',
     color: '#f30000', // Better if I don't find how to add Text stroke
