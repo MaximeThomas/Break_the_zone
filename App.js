@@ -19,7 +19,6 @@ export default class App extends React.Component {
         <LinearGradient
           start={{ x: 0.0, y: -0.35 }} end={{ x: 0.75, y: 1.0 }}
           colors={['#e60099', '#0099cc']}
-          //  colors={['#ff3300', '#ffff00']}
           style={styles.gradient}>
           <View style={styles.imageContainer}>
             <Image style={styles.img} source={require('./pictures/Break_the_zone_3.png')} />
