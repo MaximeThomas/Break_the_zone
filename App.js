@@ -7,15 +7,44 @@ import {
   Image,
   Dimensions,
   TouchableWithoutFeedback,
+  TouchableHighlight,
+  Modal,
+  Alert,
 } from "react-native";
 import { LinearGradient } from 'expo';
 
 import { strings } from './locales/i18n';
 
 export default class App extends React.Component {
+  state = {
+    modalVisible: false,
+  };
+
+  setModalVisible(visible) {
+    this.setState({ modalVisible: visible });
+  }
+
   render() {
     return (
       <View style={{ flex: 1, alignSelf: "center", alignItems: 'center', justifyContent: 'center' }}>
+        <Modal
+          animationType="fade"
+          transparent={false}
+          visible={this.state.modalVisible}
+          onRequestClose={() => {
+            Alert.alert('Modal has been closed.');
+          }}>
+          <View style={{ marginTop: 22 }}>
+            <Text>Hello World!</Text>
+            <TouchableHighlight
+              onPress={() => {
+                this.setModalVisible(!this.state.modalVisible);
+              }}>
+              <Text>Hide Modal</Text>
+            </TouchableHighlight>
+          </View>
+        </Modal>
+
         <LinearGradient
           start={{ x: 0.0, y: -0.35 }} end={{ x: 0.75, y: 1.0 }}
           colors={['#e60099', '#0099cc']}
@@ -24,7 +53,10 @@ export default class App extends React.Component {
             <Image style={styles.img} source={require('./pictures/Break_the_zone_3.png')} />
           </View>
           <View style={styles.banner}>
-            <TouchableWithoutFeedback>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                this.setModalVisible(true);
+              }}>
               <View style={styles.button_start}>
                 <LinearGradient
                   colors={['#ffff00', '#ffb300']}
