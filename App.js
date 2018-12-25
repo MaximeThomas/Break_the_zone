@@ -97,15 +97,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 20,
+    borderRadius: 30,
   },
   button_start: {
     width: 300,
-    height: 100,
+    height: 60,
     margin: 20,
   },
   text_start: {
-    fontSize: 32,
+    fontSize: 22,
     fontWeight: 'bold',
     fontFamily: 'System',
     color: '#f30000', // Better if I don't find how to add Text stroke
