@@ -7,7 +7,6 @@ import {
   Image,
   Dimensions,
   TouchableWithoutFeedback,
-  TouchableHighlight,
   Modal,
 } from "react-native";
 import { LinearGradient } from 'expo';
@@ -33,14 +32,14 @@ export default class App extends React.Component {
           onRequestClose={() => {
             this.setModalVisible(false);
           }}>
-          <View style={{ marginTop: 22 }}>
+          <View style={{ backgroundColor: '#59abe3', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>Hello World!</Text>
-            <TouchableHighlight
+            <TouchableWithoutFeedback
               onPress={() => {
-                this.setModalVisible(!this.state.modalVisible);
+                this.setModalVisible(false);
               }}>
               <Text>Hide Modal</Text>
-            </TouchableHighlight>
+            </TouchableWithoutFeedback>
           </View>
         </Modal>
 
