@@ -9,7 +9,6 @@ import {
   TouchableWithoutFeedback,
   TouchableHighlight,
   Modal,
-  Alert,
 } from "react-native";
 import { LinearGradient } from 'expo';
 
@@ -32,7 +31,7 @@ export default class App extends React.Component {
           transparent={false}
           visible={this.state.modalVisible}
           onRequestClose={() => {
-            Alert.alert('Modal has been closed.');
+            this.setModalVisible(false);
           }}>
           <View style={{ marginTop: 22 }}>
             <Text>Hello World!</Text>
