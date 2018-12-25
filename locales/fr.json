@@ -1,6 +1,7 @@
 // fr.json
 {
     "start": {
-        "start": "C'est parti !"
+        "challenge": "Défi du jour",
+        "list_success": "Succès"
     }
 }

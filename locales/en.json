@@ -1,6 +1,7 @@
 // en.json
 {
     "start": {
-        "start": "Let's go !"
+        "challenge": "Day challenge",
+        "list_success": "Success"
     }
 }

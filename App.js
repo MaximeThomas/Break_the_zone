@@ -60,7 +60,21 @@ export default class App extends React.Component {
                   colors={['#ffff00', '#ffb300']}
                   style={styles.gradient2}>
                   <Text style={styles.text_start}>
-                    {strings('start.start')}
+                    {strings('start.challenge')}
+                  </Text>
+                </LinearGradient>
+              </View>
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                this.setModalVisible(true);
+              }}>
+              <View style={styles.button_start}>
+                <LinearGradient
+                  colors={['#ffff00', '#ffb300']}
+                  style={styles.gradient2}>
+                  <Text style={styles.text_start}>
+                    {strings('start.list_success')}
                   </Text>
                 </LinearGradient>
               </View>
@@ -86,8 +100,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   button_start: {
-    width: 200,
+    width: 300,
     height: 100,
+    margin: 20,
   },
   text_start: {
     fontSize: 32,
