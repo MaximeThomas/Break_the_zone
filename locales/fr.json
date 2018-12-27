@@ -1,7 +1,7 @@
 // fr.json
 {
-    "start": {
-        "challenge": "Défi du jour",
-        "list_success": "Succès"
-    }
+	"start": {
+		"challenge": "Défi du jour",
+		"list_success": "Succès"
+	}
 }
