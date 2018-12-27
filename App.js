@@ -9,6 +9,7 @@ import {
   TouchableWithoutFeedback,
   Modal,
 } from "react-native";
+import { Icon } from 'react-native-elements'
 import { LinearGradient } from 'expo';
 
 import { strings } from './locales/i18n';
@@ -73,9 +74,17 @@ export default class App extends React.Component {
                 <LinearGradient
                   colors={['#ffff00', '#ffb300']}
                   style={styles.gradient2}>
-                  <Text style={styles.text_start}>
-                    {strings('start.list_success')}
-                  </Text>
+                  <View style={styles.button_success}>
+                    <Text style={styles.text_start}>
+                      {strings('start.list_success')}
+                    </Text>
+                    <Icon
+                      name='trophy'
+                      type='evilicon'
+                      color='#f30000'
+                      size={30}
+                    />
+                  </View>
                 </LinearGradient>
               </View>
             </TouchableWithoutFeedback>
@@ -103,6 +112,11 @@ const styles = StyleSheet.create({
     width: 300,
     height: 60,
     margin: 20,
+  },
+  button_success: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
   },
   text_start: {
     fontSize: 22,
