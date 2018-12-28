@@ -5,5 +5,8 @@
 	},
 	"challenge": {
 		"title": "Challenge of the day"
+	},
+	"list": {
+		"title": "Success list"
 	}
 }

@@ -3,52 +3,25 @@ import {
 	StyleSheet,
 	Text,
 	View,
-	AppRegistry,
 	Image,
 	Dimensions,
 	TouchableWithoutFeedback,
-	Modal,
 } from "react-native";
 import { Icon } from 'react-native-elements'
 import { LinearGradient } from 'expo';
 
 import { strings } from '../locales/i18n';
 import Challenge from './Challenge';
+import SuccessList from './SuccessList';
 
 export default class HomeScreen extends React.Component {
 	static navigationOptions = {
 		header: null,
 	};
 
-	state = {
-		modalVisible: false,
-	};
-
-	setModalVisible(visible) {
-		this.setState({ modalVisible: visible });
-	}
-
 	render() {
 		return (
 			<View style={{ flex: 1, alignSelf: "center", alignItems: 'center', justifyContent: 'center' }}>
-				<Modal
-					animationType="fade"
-					transparent={false}
-					visible={this.state.modalVisible}
-					onRequestClose={() => {
-						this.setModalVisible(false);
-					}}>
-					<View style={{ backgroundColor: '#59abe3', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-						<Text>Hello World!</Text>
-						<TouchableWithoutFeedback
-							onPress={() => {
-								this.setModalVisible(false);
-							}}>
-							<Text>Hide Modal</Text>
-						</TouchableWithoutFeedback>
-					</View>
-				</Modal>
-
 				<LinearGradient
 					start={{ x: 0.0, y: -0.35 }} end={{ x: 0.75, y: 1.0 }}
 					colors={['#e60099', '#0099cc']}
@@ -70,9 +43,7 @@ export default class HomeScreen extends React.Component {
 							</View>
 						</TouchableWithoutFeedback>
 						<TouchableWithoutFeedback
-							onPress={() => {
-								this.setModalVisible(true);
-							}}>
+							onPress={() => this.props.navigation.navigate('SuccessList')}>
 							<View style={styles.button_start}>
 								<LinearGradient
 									colors={['#ffff00', '#ffb300']}

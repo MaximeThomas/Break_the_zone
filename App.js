@@ -2,6 +2,7 @@ import React from 'react';
 
 import HomeScreen from './navigation/HomeScreen';
 import Challenge from './navigation/Challenge';
+import SuccessList from './navigation/SuccessList';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
 const AppNavigator = createStackNavigator({
@@ -10,6 +11,9 @@ const AppNavigator = createStackNavigator({
 	},
 	Challenge: {
 		screen: Challenge,
+	},
+	SuccessList: {
+		screen: SuccessList,
 	}
 },
 	{
