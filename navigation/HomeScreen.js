@@ -13,6 +13,7 @@ import { Icon } from 'react-native-elements'
 import { LinearGradient } from 'expo';
 
 import { strings } from '../locales/i18n';
+import Challenge from './Challenge';
 
 export default class HomeScreen extends React.Component {
 	static navigationOptions = {
@@ -57,9 +58,7 @@ export default class HomeScreen extends React.Component {
 					</View>
 					<View style={styles.banner}>
 						<TouchableWithoutFeedback
-							onPress={() => {
-								this.setModalVisible(true);
-							}}>
+							onPress={() => this.props.navigation.navigate('Challenge')}>
 							<View style={styles.button_start}>
 								<LinearGradient
 									colors={['#ffff00', '#ffb300']}
