@@ -1,4 +1,7 @@
 {
+	"intro": {
+		"next": "Next"
+	},
 	"start": {
 		"challenge": "Day challenge",
 		"list_success": "Success"

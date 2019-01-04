@@ -1,4 +1,7 @@
 {
+	"intro": {
+		"next": "Suivant"
+	},
 	"start": {
 		"challenge": "Défi du jour",
 		"list_success": "Succès"
