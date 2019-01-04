@@ -3,7 +3,6 @@ import {
 	StyleSheet,
 	Text,
 	View,
-	Image,
 	Dimensions,
 	TouchableWithoutFeedback,
 } from "react-native";
@@ -26,9 +25,6 @@ export default class HomeScreen extends React.Component {
 					start={{ x: 0.0, y: -0.35 }} end={{ x: 0.75, y: 1.0 }}
 					colors={['#e60099', '#0099cc']}
 					style={styles.gradient}>
-					<View style={styles.imageContainer}>
-						<Image style={styles.img} source={require('../pictures/Break_the_zone_3.png')} />
-					</View>
 					<View style={styles.banner}>
 						<TouchableWithoutFeedback
 							onPress={() => this.props.navigation.navigate('Challenge')}>
@@ -97,16 +93,6 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		fontFamily: 'System',
 		color: '#f30000', // Better if I don't find how to add Text stroke
-	},
-	imageContainer: {
-		flex: 1,
-		justifyContent: 'center',
-	},
-	img: {
-		flex: 1,
-		resizeMode: 'contain',
-		width: Dimensions.get('window').width / 1.5,
-		overflow: 'visible',
 	},
 	banner:
 	{
