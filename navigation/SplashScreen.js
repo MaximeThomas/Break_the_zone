@@ -10,16 +10,12 @@ import { LinearGradient } from 'expo';
 import Introduction from './Introduction';
 
 export default class SplashScreen extends React.Component {
-	constructor(props) {
-		super(props)
-		setTimeout(() => {this.props.navigation.navigate('Home')}, 2000)
-	}
-
 	static navigationOptions = {
 		header: null,
 	};
 
 	render() {
+		setTimeout(() => {this.props.navigation.navigate('Introduction')}, 2000)
 		return (
 			<View style={{ flex: 1, alignSelf: "center", alignItems: 'center', justifyContent: 'center' }}>
 				<LinearGradient
