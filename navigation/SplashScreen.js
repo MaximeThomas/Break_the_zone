@@ -4,6 +4,7 @@ import {
 	View,
 	Image,
 	Dimensions,
+	StatusBar,
 } from "react-native";
 import { LinearGradient } from 'expo';
 
@@ -18,6 +19,9 @@ export default class SplashScreen extends React.Component {
 		setTimeout(() => {this.props.navigation.navigate('Introduction')}, 2000)
 		return (
 			<View style={{ flex: 1, alignSelf: "center", alignItems: 'center', justifyContent: 'center' }}>
+				<StatusBar
+					hidden={true}
+				/>
 				<LinearGradient
 					start={{ x: 0.0, y: -0.35 }} end={{ x: 0.75, y: 1.0 }}
 					colors={['#e60099', '#0099cc']}
