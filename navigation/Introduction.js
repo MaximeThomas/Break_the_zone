@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
 	StyleSheet,
 	View,
@@ -9,7 +9,6 @@ import {
 import { LinearGradient } from 'expo';
 
 import { strings } from '../locales/i18n';
-import HomeScreen from './HomeScreen';
 
 export default class Introduction extends React.Component {
 	static navigationOptions = {

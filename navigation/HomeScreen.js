@@ -6,12 +6,10 @@ import {
 	Dimensions,
 	TouchableWithoutFeedback,
 } from "react-native";
-import { Icon } from 'react-native-elements'
+import { Icon } from 'react-native-elements';
 import { LinearGradient } from 'expo';
 
 import { strings } from '../locales/i18n';
-import Challenge from './Challenge';
-import SuccessList from './SuccessList';
 
 export default class HomeScreen extends React.Component {
 	static navigationOptions = {

@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import { LinearGradient } from 'expo';
 
-import Introduction from './Introduction';
 
 let hasViewedIntro = false;
 
