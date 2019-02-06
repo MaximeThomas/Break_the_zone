@@ -5,6 +5,7 @@ import {
 	Image,
 	Dimensions,
 	StatusBar,
+	BackHandler,
 } from "react-native";
 import { LinearGradient } from 'expo';
 import check_if_first_launch from '../utils/check_if_first_launch';
@@ -22,6 +23,18 @@ export default class SplashScreen extends React.Component {
 			is_first_launch: false,
 		};
 	}
+
+	componentDidMount() {
+		BackHandler.addEventListener("hardwareBackPress", this.onBackPress);
+	}
+
+	componentWillUnmount() {
+		BackHandler.removeEventListener("hardwareBackPress", this.onBackPress);
+	}
+
+	onBackPress = () => {
+		return true;
+	};
 
 	async componentWillMount() {
 		const is_first_launch = await check_if_first_launch();
