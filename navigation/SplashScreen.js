@@ -7,22 +7,36 @@ import {
 	StatusBar,
 } from "react-native";
 import { LinearGradient } from 'expo';
+import check_if_first_launch from '../utils/check_if_first_launch';
 
-
-let hasViewedIntro = false;
 
 export default class SplashScreen extends React.Component {
 	static navigationOptions = {
 		header: null,
 	};
 
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			is_first_launch: false,
+		};
+	}
+
+	async componentWillMount() {
+		const is_first_launch = await check_if_first_launch();
+		this.setState({ is_first_launch });
+	}
+
 	render() {
-		if (!hasViewedIntro) {
-			setTimeout(() => { this.props.navigation.navigate('Introduction') }, 2000)
-			hasViewedIntro = true
+		const { is_first_launch } = this.state;
+
+		if (is_first_launch) {
+			setTimeout(() => { this.props.navigation.navigate('Introduction') }, 2000);
 		} else {
-			setTimeout(() => { this.props.navigation.navigate('Home') }, 2000)
+			setTimeout(() => { this.props.navigation.navigate('Home') }, 2000);
 		}
+
 		return (
 			<View style={{ flex: 1, alignSelf: "center", alignItems: 'center', justifyContent: 'center' }}>
 				<StatusBar
