@@ -59,10 +59,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	button_container: {
-		flex: 0.1,
-		backgroundColor: '#6bb9f0',
-		borderRadius: 30,
-		alignItems: 'center',
+		flex: 0.3,
 		justifyContent: 'center',
 	},
 	text_intro: {
