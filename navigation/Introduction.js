@@ -32,7 +32,7 @@ export default class Introduction extends React.Component {
 							onPress={() => this.props.navigation.navigate('Home')}>
 							<View style={styles.button}>
 								<Text style={styles.text_intro}>
-									{strings('intro.next')}
+									{strings('screen.intro.next')}
 								</Text>
 							</View>
 						</TouchableWithoutFeedback>

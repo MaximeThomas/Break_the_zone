@@ -1,15 +1,17 @@
 {
-	"intro": {
-		"next": "Suivant"
-	},
-	"start": {
-		"challenge": "Défi du jour",
-		"list_success": "Succès"
-	},
-	"challenge": {
-		"title": "Défi du jour"
-	},
-	"list": {
-		"title": "Liste des succès"
+	"screen": {
+		"intro": {
+			"next": "Suivant"
+		},
+		"start": {
+			"challenge": "Défi du jour",
+			"list_success": "Succès"
+		},
+		"challenge": {
+			"title": "Défi du jour"
+		},
+		"list": {
+			"title": "Liste des succès"
+		}
 	}
 }

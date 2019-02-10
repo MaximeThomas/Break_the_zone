@@ -31,7 +31,7 @@ export default class HomeScreen extends React.Component {
 									colors={['#ffff00', '#ffb300']}
 									style={styles.gradient2}>
 									<Text style={styles.text_start}>
-										{strings('start.challenge')}
+										{strings('screen.start.challenge')}
 									</Text>
 								</LinearGradient>
 							</View>
@@ -44,7 +44,7 @@ export default class HomeScreen extends React.Component {
 									style={styles.gradient2}>
 									<View style={styles.button_success}>
 										<Text style={styles.text_start}>
-											{strings('start.list_success')}
+											{strings('screen.start.list_success')}
 										</Text>
 										<Icon
 											name='trophy'
