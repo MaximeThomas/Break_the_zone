@@ -2,10 +2,32 @@ import React from 'react';
 
 import SplashScreen from './navigation/SplashScreen';
 import Introduction from './navigation/Introduction';
-import HomeScreen from './navigation/HomeScreen';
 import Challenge from './navigation/Challenge';
 import SuccessList from './navigation/SuccessList';
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createBottomTabNavigator, createStackNavigator, createAppContainer } from "react-navigation";
+
+const HomeScreen = createBottomTabNavigator({
+	Challenge: Challenge,
+	SuccessList: SuccessList,
+},
+{
+	tabBarOptions: {
+	activeTintColor: 'tomato',
+	inactiveTintColor: 'gray',
+	style: {
+		backgroundColor: '#171F33',
+	},
+	labelStyle: {
+		fontSize: 15,
+		fontFamily: "System"
+	}
+},
+});
+
+HomeScreen.navigationOptions = {
+	header: null,
+};
+
 
 const AppNavigator = createStackNavigator({
 	Splash: {
@@ -17,12 +39,6 @@ const AppNavigator = createStackNavigator({
 	Home: {
 		screen: HomeScreen,
 	},
-	Challenge: {
-		screen: Challenge,
-	},
-	SuccessList: {
-		screen: SuccessList,
-	}
 },
 	{
 	  initialRouteName: 'Splash',

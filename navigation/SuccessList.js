@@ -11,13 +11,6 @@ import { strings } from '../locales/i18n';
 export default class SuccessList extends React.Component {
 	static navigationOptions = {
 		title: strings('screen.list.title'),
-		headerStyle: {
-			backgroundColor: '#6bb9f0',
-		},
-		headerTintColor: 'white',
-		headerTitleStyle: {
-			fontWeight: 'bold',
-		},
 	};
 
 	render() {

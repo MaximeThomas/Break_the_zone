@@ -15,13 +15,6 @@ let date = day + '/' + month + '/' + year;
 export default class Challenge extends React.Component {
 	static navigationOptions = {
 		title: strings('screen.challenge.title'),
-		headerStyle: {
-			backgroundColor: '#6bb9f0',
-		},
-		headerTintColor: 'white',
-		headerTitleStyle: {
-			fontWeight: 'bold',
-		},
 	};
 
 	render() {
