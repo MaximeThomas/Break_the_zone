@@ -21,4 +21,14 @@ export function strings(name, params = {}) {
   return I18n.t(name, params);
 };
 
+// Get the date
+export function date(name, params = {}) {
+  var date = new Date();
+  if (currentLocale == 'en'){
+    return I18n.strftime(date, "%d/%m/%Y");
+  } else {
+    return I18n.strftime(date, "%m/%d/%Y");
+  }
+};
+
 export default I18n;

@@ -5,12 +5,7 @@ import {
 	View,
 } from "react-native";
 
-import { strings } from '../locales/i18n';
-
-let day = new Date().getDate(); 		//Current Dates
-let month = new Date().getMonth() + 1;	//Current Month
-let year = new Date().getFullYear(); 	//Current Year
-let date = day + '/' + month + '/' + year;
+import { strings, date } from '../locales/i18n';
 
 export default class Challenge extends React.Component {
 	static navigationOptions = {
@@ -22,7 +17,7 @@ export default class Challenge extends React.Component {
 			<View style={styles.background}>
 				<View style={styles.date_header}>
 					<Text style={styles.date}>
-						{date}
+						{date()}
 					</Text>
 				</View>
 				<View style={styles.name_header}>
